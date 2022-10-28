@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Video Game</title>
+</head>
+<body>
+  <!-- GAME CONTAINER BEGIN-->
+  <div class="game__container"> 
+
+<!-- ```````````````````````````````````````````````````````````````````````` -->
+    <!-- TOP SECTION OF GAME SCREEN -->
+    <!-- HEADER + SCORE SCREENS -->
+    <header class="game__score">
+      <!-- SCORE  + SCORE SCREEN -->
+      <span class="game__currentScore">CURRENT SCORE </span>
+      <span class="game__highScore">HIGH SCORE </span>
+       
+      <!-- SCORE LIGHT + SCORE SCREEN -->
+      <span class="game__currentScoreScreen">00</span>
+      <span class="game__highScoreScreen">00</span> 
+    </header>
+
+<!-- ````````````````````````````````````````````````````````````````````````` -->
+    <!-- BOTTOM SECTION OF GAME SCREEN -->
+    <!-- GAME PLAY SCREEN AND BUTTONS -->
+    <section class="game__buttons">
+      <!-- PROMPT LABEL AND INPUT SCREEN -->
+      <label for="guess" class="game__numberGuessLabel">Type Number Below</label>
+      <input type="text" name="guess" id="guess" class="game__input">
+      <!-- PLAY AND RESET BUTTONS -->
+      <button class="game__btn game__play-button">GUESS</button>
+      <button class="game__btn game__reset-button">RESET</button>
+    </section>
+  
+<!-- `````````````````````````````````````````````````````````````````````````` -->
+</div>  
+  <!-- GAME CONTAINER END-->
+
+  <script src="script.js"></script>
+</body>
+</html>

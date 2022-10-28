@@ -1,0 +1,164 @@
+html{
+  font-size: 62.5%;
+}
+
+:root{
+  --on: 0;
+  --off: 0;
+
+}
+
+body {
+  background-image: linear-gradient(to top right, rgba(234, 45, 130, 0.543), rgba(90, 234, 0, 0.502) );
+  height: 100vh;
+
+}
+
+*::before, ::after, * {
+  margin: 0;
+  padding: 0;
+}
+
+.game__container {
+  margin: 10vh auto;
+  width: 50vh;
+  height: 50vh;
+  border: .1rem solid #000;
+  background-color: #cc73ff;
+  border-radius: 50%;
+  padding: 8rem 6rem 5rem 6rem;
+  box-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.343)
+  
+}
+
+.game__score{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr );
+  padding: 2rem;
+  justify-items: center;
+  align-content: center;
+  position: relative;
+
+}
+
+.game__score::after{
+  content: "Correct!";
+  text-transform: uppercase;
+  color: #ffff00;
+  font-size: 2.7rem;
+  position: absolute;
+  top: -20%;
+  left: 35%;
+  opacity: var(--on);
+}
+
+.game__currentScore, .game__highScore{
+  font-size: 1.8rem;
+  padding: .5rem;
+
+}
+.game__currentScoreScreen, .game__highScoreScreen{
+  display: inline-block;
+  font-size: 3rem;
+  position: relative;
+  background-color: #fff;
+  padding: .2rem;
+
+}
+.game__currentScoreScreen::before {
+  content: "";
+  width:  2rem;
+  height: 2rem;
+  background-color: #ffff00;
+  top: .4rem;
+  left: -3.8rem;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+}
+.game__highScoreScreen::before {
+  content: "";
+  width:  2rem;
+  height: 2rem;
+  background-color: #ff0000;
+  top: .4rem;
+  left: -3.8rem;
+  border-radius: 50%;
+  position: absolute;
+  display: block;
+}
+/* ````````````````````````````````````````````````` */
+.game__buttons{
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  align-items: center;
+  gap: 2rem;
+  
+}
+
+.game__numberGuessLabel{
+  position: relative;
+  font-size: 2rem;
+  
+}
+
+.game__numberGuessLabel::before {
+  position: absolute;
+  content: "Too Low";
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #3b0e52;
+  bottom: 4%;
+  right: -10.9rem;
+  opacity: var(--off);
+  /* opacity: 1; */
+
+  
+}
+.game__numberGuessLabel::after {
+  position: absolute;
+  content: "Too High";
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  color: #45155d;
+  top: 0.5rem;;
+  left: -70%;
+  opacity: var(--on);  
+  /* opacity: 1;   */
+}
+
+.game__input{
+  width: 5rem;
+  height: 5rem;
+  font-size: 4rem;
+
+}
+.game__play-button {
+  background-color: #ddee;
+  color: #ff0000;
+  font-size: 1.8rem;
+
+}
+.game__reset-button{
+/* background-color: #000; */
+background-image: linear-gradient(to bottom left, rgba(0, 0, 0, 0.528), #fff);
+color: #3b0e52;
+font-size: 1.8rem;
+
+}
+
+.game__btn{
+  display: inline-block;
+  width: 20rem;
+  padding: 1.5rem .5rem;
+  border-radius: 1.6rem;
+  cursor: pointer;
+  transform: all .2s;
+}
+
+.game__btn:active {
+  
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
